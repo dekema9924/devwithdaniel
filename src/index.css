@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+:root {
+  --light-yellow: #e7f721;
+  --body-text: #d1d1d1;
+  --subheading-text: #a0a0a0;
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Anton", sans-serif;
+}
+
+.light-yellow {
+  background-color: #e7f721;
+}
+
+.heading-font {
+  font-family: var(--heading-font);
+}
+
+body {
+  background-color: #0a0a0f;
+  color: var(--body-text);
+  font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+  color: var(--light-yellow);
+}
+
+p.subheading {
+  font-family: var(--subheading-font);
+  color: var(--subheading-text);
+}
