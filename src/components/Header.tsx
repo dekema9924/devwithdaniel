@@ -1,12 +1,30 @@
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useState } from 'react';
+import { motion } from "motion/react"
+import { useRef } from 'react';
+import { useInView } from 'motion/react';
 
 const Header = () => {
     const [isNavOpen, setNavOpen] = useState(false)
+    const ref = useRef(null)
+    const isInView = useInView(ref,
+        {
+            amount: 0,
+            once: false,
+        })
+
 
     return (
         <>
-            <header className=' flex items-center justify-between   h-14 relative'>
+            <motion.header
+                ref={ref}
+                initial={{ opacity: 1, y: 0 }}
+                animate={{
+                    opacity: isInView ? 1 : 0,
+                    y: isInView ? 0 : -100,
+                }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className=' flex items-center justify-between   h-14 relative '>
                 {/* header */}
                 <div onClick={() => setNavOpen(!isNavOpen)} className=" w-10 h-10 flex flex-col gap-1 justify-center cursor-pointer">
                     <span className={`border w-11/12 block transition-all duration-700  ${isNavOpen ? "-rotate-45 -translate-x-1 translate-y-[-7px] w-full" : ""}`}></span>
@@ -16,14 +34,14 @@ const Header = () => {
                 <h1>@WebDevWithDaniel</h1>
                 <div className='lg:flex gap-4 items-center hidden'>
                     <p className=''>Lets connect</p>
-                    <div className="border bg-white text-black font-bold cursor-pointer pt-1 flex text-sm w-fit px-4 h-8 rounded-md ">
+                    <div className="border bg-white text-black font-bold cursor-copy pt-1 flex text-sm w-fit px-4 h-8 rounded-md ">
                         <p className='px-2'>dekema2000@devwithdaniel.com</p>
                         <ContentCopyIcon />
                     </div>
                 </div>
 
                 {/* navbar */}
-                <nav className={` absolute left-0 top-20 w-full  overflow-hidden transition-all duration-700 z-50 tracking-widest ${isNavOpen ? "h-70" : "h-0"} `}>
+                <nav className={` absolute left-0 top-20 w-33 bg-[#0a0a0f]  overflow-hidden transition-all duration-700 z-50 tracking-widest ${isNavOpen ? "h-70" : "h-0"} `}>
                     <ul className='flex flex-col gap-4 text-2xl font-bold lett'>
                         <li className='heading-font cursor-pointer hover:text-[#e7f721]'>HOME</li>
                         <li className='heading-font cursor-pointer hover:text-[#e7f721]'>ABOUT</li>
@@ -33,7 +51,7 @@ const Header = () => {
                         <li className='heading-font cursor-pointer hover:text-[#e7f721]'>CONTACT</li>
                     </ul>
                 </nav>
-            </header>
+            </motion.header >
         </>
     )
 
