@@ -16,14 +16,11 @@ import HeroImg from '../../../public/images/HeroImg.jpg'
 function Hero() {
     const [index, setIndex] = useState(0);
     const ref = useRef(null)
-    const isInView = useInView(ref, { amount: 0.9 })
+    const isInView = useInView(ref, { amount: 0.5 })
     const titles = ["FULLSTACK", "FRONTEND", "BACKEND"];
     const bgColors = ["bg-blue-400", "bg-red-400", "bg-green-400"];
 
 
-    useEffect(() => {
-        console.log("Element is in view: ", isInView)
-    }, [isInView])
 
     useEffect(() => {
         const cycle = setInterval(() => {
@@ -78,28 +75,22 @@ function Hero() {
                         <p>(2020 - PRESENT)</p>
                     </div>
                 </motion.div>
-                <motion.img
-                    initial={{
-                        width: "50px",
-                        height: "60px",
-                        paddingBottom: "90px",
-                        skewX: 4,
-                        skewY: 10
-                    }}
-                    whileInView={{
-                        // translateY: isInView ? "100px" : '0px',
-                        width: isInView ? "20px" : '',
-                        height: isInView ? "220px" : '',
-                        paddingBottom: isInView ? "0px" : "90px",
-                        skew: 0
-                    }}
-                    transition={{ duration: 1.5, ease: 'easeOut' }}
-                    viewport={{ amount: 0.7 }}
+                <div>
+                    <motion.img
 
+                        animate={{
+                            width: isInView ? 34 : '100%',
+                            height: isInView ? 224 : 756,
+                            marginBottom: isInView ? 0 : 44,
+                            translateY: isInView ? 0 : 144,
 
-                    className='rounded-lg mt-14 scale-120 md:w-7/12  w-10/12 md:h-[600px] m-auto object-cover transition-all duration-500' src={HeroImg} alt="profile-Image"
-                />
-                <div className=" w-fit  flex flex-col items-center gap-2 m-auto mt-22">
+                        }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        viewport={{ once: true, amount: 0.7 }}
+                        className='rounded-lg mt-10  w-4 md:h-66 h-44 hover:animate-pulse object-center   m-auto object-cover transition-all duration-500' src={HeroImg} alt="profile-Image"
+                    />
+                </div>
+                <div className=" w-fit  flex flex-col items-center gap-2 m-auto  mt-42">
                     <span className=" w-1 h-10 block rounded-md bg-gray-700 ">
                         <motion.span
 
