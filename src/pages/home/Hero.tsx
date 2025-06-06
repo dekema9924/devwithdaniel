@@ -4,7 +4,9 @@ import { useInView } from "motion/react"
 import { useRef, useEffect, useState } from "react"
 import Process from '../../pages/home/Process'
 import About from '../../pages/home/About'
-
+import Projects from './Projects'
+import Stats from './Stats'
+import Contact from "../../components/Contact"
 function Hero() {
     const [index, setIndex] = useState(0);
     const ref = useRef(null)
@@ -71,6 +73,11 @@ function Hero() {
                     </div>
                 </motion.div>
                 <motion.img
+                    initial={{
+                        width: "300px",
+                        height: "400px",
+                        paddingBottom: "90px"
+                    }}
                     animate={{
                         // translateY: isInView ? "100px" : '0px',
                         width: isInView ? "20px" : '',
@@ -104,6 +111,9 @@ function Hero() {
                 {/* //about */}
                 <About />
                 <Process />
+                <Projects />
+                <Stats />
+                <Contact />
             </main >
 
 

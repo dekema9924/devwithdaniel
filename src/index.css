@@ -20,6 +20,7 @@ body {
   background-color: #0a0a0f;
   color: var(--body-text);
   font-family: var(--body-font);
+  scroll-behavior: smooth;
 }
 
 h1,

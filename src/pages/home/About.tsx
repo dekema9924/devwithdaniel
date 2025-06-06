@@ -11,7 +11,7 @@ function About() {
     const isInView2 = useInView(ref2, { amount: 0.5, once: false })
 
     return (
-        <section className="md:mt-14 mt-7 md:my-22 ">
+        <section className="md:mt-14 mt-24 md:my-22 ">
             <motion.h1
                 ref={ref1}
                 initial={{ opacity: 0, y: 40 }}

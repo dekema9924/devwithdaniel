@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion } from "motion/react"
 import { useRef } from 'react';
 import { useInView } from 'motion/react';
+import CopyButton from './CopyButton';
 
 const Header = () => {
     const [isNavOpen, setNavOpen] = useState(false)
@@ -32,13 +33,7 @@ const Header = () => {
                     <span className={`border w-9/12 block transition-all duration-700  ${isNavOpen ? "rotate-45 -translate-x-1 -translate-y-3 w-full" : ""}`}></span>
                 </div>
                 <h1>@WebDevWithDaniel</h1>
-                <div className='lg:flex gap-4 items-center hidden'>
-                    <p className=''>Lets connect</p>
-                    <div className="border bg-white text-black font-bold cursor-copy pt-1 flex text-sm w-fit px-4 h-8 rounded-md ">
-                        <p className='px-2'>dekema2000@devwithdaniel.com</p>
-                        <ContentCopyIcon />
-                    </div>
-                </div>
+                <CopyButton />
 
                 {/* navbar */}
                 <nav className={` absolute left-0 top-20 w-33 bg-[#0a0a0f]  overflow-hidden transition-all duration-700 z-50 tracking-widest ${isNavOpen ? "h-70" : "h-0"} `}>
