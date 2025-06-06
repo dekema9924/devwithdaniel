@@ -70,8 +70,8 @@ function Hero() {
                         <h1 className='md:text-[5em] text-[3em] text-center line-clamp-3 md:leading-25 leading-14'>DEVELOPER </h1>
 
                     </div>
-                    <div className='text-xs md:w-80 m-auto gap-4 flex items-center justify-between'>
-                        <p className='w-66'>KENNESAW STATE UNIVERSITY </p>
+                    <div className='text-xs md:w-80 m-auto md:gap-4 flex items-center md:justify-between justify-center mt-1'>
+                        <p className=' w-33'>KENNESAW STATE UNIVERSITY </p>
                         <p>(2020 - PRESENT)</p>
                     </div>
                 </motion.div>
@@ -80,7 +80,7 @@ function Hero() {
 
                         animate={{
                             width: isInView ? 34 : '100%',
-                            height: isInView ? 224 : 756,
+                            height: isInView ? 224 : 606,
                             marginBottom: isInView ? 0 : 44,
                             translateY: isInView ? 0 : 144,
 

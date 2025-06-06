@@ -10,7 +10,7 @@ function Process() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.6 }}
                     viewport={{ amount: 0.5 }}
-                    className='text-3xl relative md:text-[3em] md:line-clamp-2 md:mt-44 mt-22 text-center w-44 md:w-96 
+                    className='text-3xl relative md:text-[3em] md:line-clamp-2 md:mt-44 mt-44 text-center w-44 md:w-96 
                     before:content-[""] before:border-2 before:w-6 before:rotate-10 before:right-4 before:h-1 before:absolute before:bottom-5
                     '>My true design process
                 </motion.h1>
@@ -19,7 +19,7 @@ function Process() {
                     transition={{ duration: 1, ease: easeInOut, repeat: Infinity }}
                     className='light-yellow  h-4 w-4 block rounded-full relative bottom-25 md:-right-65 -right-25'></motion.span>
 
-                <div className='md:grid md:grid-cols-2 gap-8 md:m-auto flex flex-col w-11/12 '>
+                <div className='md:grid md:grid-cols-2 gap-8 md:m-auto mt-10 md:mt-22  flex flex-col w-11/12 '>
 
                     {/* //cards */}
                     <motion.div
