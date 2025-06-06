@@ -80,8 +80,8 @@ function Hero() {
                 </motion.div>
                 <motion.img
                     initial={{
-                        width: "300px",
-                        height: "400px",
+                        width: "50px",
+                        height: "60px",
                         paddingBottom: "90px",
                         skewX: 4,
                         skewY: 10
