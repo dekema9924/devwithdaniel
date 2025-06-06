@@ -70,29 +70,36 @@ const Projects = () => {
                         {
                             [
                                 {
-                                    name: "Frontend",
+                                    name: "QuickBlog",
                                     backgroundImg: "https://images.unsplash.com/photo-1607706189992-eae578626c86?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fHww",
-                                    id: 1
+                                    id: 1,
+                                    preview: "https://quickbl0gs.netlify.app"
                                 },
                                 {
-                                    name: "Backend",
+                                    name: "StackApply",
                                     backgroundImg: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kaW5nfGVufDB8fDB8fHww",
-                                    id: 2
+                                    id: 2,
+                                    preview: "https://stackapply.netlify.app"
                                 },
                                 {
-                                    name: "Fullstack",
+                                    name: "MangaVerse",
                                     backgroundImg: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZSUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
-                                    id: 3
+                                    id: 3,
+                                    preview: "https://manga.devwithdaniel.com"
+
                                 },
                                 {
-                                    name: "API",
+                                    name: "BrainWave",
                                     backgroundImg: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D",
-                                    id: 4
+                                    id: 4,
+                                    preview: "https://br0inwave.netlify.app"
+
                                 },
                             ].map((p) => {
                                 return (
                                     <>
-                                        <div
+                                        <a href={p.preview}
+                                            target='_blank'
                                             onMouseEnter={() => handleProjectHovered(p.id)}
                                             onMouseLeave={() => setActiveIndex(null)}
                                             style={{ backgroundImage: `url("${p.backgroundImg}")` }}
@@ -111,12 +118,12 @@ const Projects = () => {
                                                     animate={{ x: 0, opacity: 1 }}
                                                     exit={{ x: 100, opacity: 0 }}
                                                     transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                                                    className="light-yellow px-4 w-30 h-14 text-black font-bold flex justify-center rounded-br-md rounded-tr-md items-center z-20"
+                                                    className="light-yellow capitalize px-4 w-30 h-14 text-black font-bold flex justify-center rounded-br-md rounded-tr-md items-center z-20"
                                                 >
                                                     {p.name}
                                                 </motion.span>
                                             )}
-                                        </div>
+                                        </a>
 
 
                                     </>

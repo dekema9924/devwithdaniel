@@ -7,6 +7,12 @@ import About from '../../pages/home/About'
 import Projects from './Projects'
 import Stats from './Stats'
 import Contact from "../../components/Contact"
+import HeroImg from '../../../public/images/HeroImg.jpg'
+
+
+
+
+
 function Hero() {
     const [index, setIndex] = useState(0);
     const ref = useRef(null)
@@ -76,18 +82,22 @@ function Hero() {
                     initial={{
                         width: "300px",
                         height: "400px",
-                        paddingBottom: "90px"
+                        paddingBottom: "90px",
+                        skewX: 4,
+                        skewY: 10
                     }}
-                    animate={{
+                    whileInView={{
                         // translateY: isInView ? "100px" : '0px',
                         width: isInView ? "20px" : '',
                         height: isInView ? "220px" : '',
-                        paddingBottom: isInView ? "0px" : "90px"
+                        paddingBottom: isInView ? "0px" : "90px",
+                        skew: 0
                     }}
                     transition={{ duration: 1.5, ease: 'easeOut' }}
+                    viewport={{ amount: 0.7 }}
 
 
-                    className='rounded-lg mt-14 md:w-7/12 w-10/12 md:h-[600px] m-auto object-cover transition-all duration-500' src="https://plus.unsplash.com/premium_photo-1693258698597-1b2b1bf943cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzN8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D" alt="profile-Image"
+                    className='rounded-lg mt-14 scale-120 md:w-7/12  w-10/12 md:h-[600px] m-auto object-cover transition-all duration-500' src={HeroImg} alt="profile-Image"
                 />
                 <div className=" w-fit  flex flex-col items-center gap-2 m-auto mt-22">
                     <span className=" w-1 h-10 block rounded-md bg-gray-700 ">
