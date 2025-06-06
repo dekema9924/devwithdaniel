@@ -1,5 +1,4 @@
 
-import React from 'react'
 import { motion } from 'motion/react'
 import boy from '../../public/images/boy.png'
 

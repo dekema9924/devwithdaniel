@@ -1,12 +1,9 @@
 import { easeInOut, motion } from 'motion/react'
-import { useInView } from "motion/react";
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 
 const Projects = () => {
-    const ref = useRef(null)
-    const isInView = useInView(ref, { amount: 0.7 })
     const [isHovered, setHovered] = useState(false)
     const [activeIndex, setActiveIndex] = useState<number | null>(null)
 

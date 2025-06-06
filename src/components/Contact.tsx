@@ -1,8 +1,8 @@
 import CopyButton from "./CopyButton"
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import SportsBasketballIcon from '@mui/icons-material/SportsBasketball'; // Use this as placeholder for Dribbble
+// import TwitterIcon from '@mui/icons-material/Twitter';
+// import InstagramIcon from '@mui/icons-material/Instagram';
+// import SportsBasketballIcon from '@mui/icons-material/SportsBasketball'; 
 import { motion, useInView, useAnimation } from "motion/react";
 import { useRef, useEffect } from "react";
 
