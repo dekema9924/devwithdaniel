@@ -126,7 +126,7 @@ function Contact() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ amount: 0.7 }}
                 transition={{ type: "spring", stiffness: 120, damping: 10 }}
-                className="text-2xl w-96 mt-10 !text-gray-300">Think I'd be a good fit for your team or project? </motion.h1>
+                className="text-2xl md:w-96 mt-10 !text-gray-300">Think I'd be a good fit for your team or project? </motion.h1>
             <CopyButton />
 
             <div className="mt-10 text-sm text-gray-500">

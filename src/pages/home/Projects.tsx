@@ -16,7 +16,7 @@ const Projects = () => {
 
     return (
         <>
-            <section className="my-24 relative">
+            <section className="my-24 relative overflow-hidden">
                 <motion.h1
                     initial={{ skewY: 44, opacity: 0 }}
                     whileInView={{ skewY: 0, opacity: 1 }}
@@ -36,7 +36,7 @@ const Projects = () => {
                         duration: 0.8,
                         ease: [0.25, 0.8, 0.25, 1]
                     }}
-                    className="pointer-events-none skew-x-12 skew-y-12 relative top-22 "
+                    className="pointer-events-none skew-x-12 skew-y-12 relative md:top-22 top-33 "
                 >
                     <img
                         src="https://framerusercontent.com/images/NJSwXyDlaUZn0O49iCxLH4yY.png?scale-down-to=1024"

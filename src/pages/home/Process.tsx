@@ -10,16 +10,16 @@ function Process() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.6 }}
                     viewport={{ amount: 0.5 }}
-                    className='text-4xl relative md:text-[3em] md:line-clamp-2 mt-44 text-center w-56 md:w-96 
+                    className='text-3xl relative md:text-[3em] md:line-clamp-2 md:mt-44 mt-22 text-center w-44 md:w-96 
                     before:content-[""] before:border-2 before:w-6 before:rotate-10 before:right-4 before:h-1 before:absolute before:bottom-5
                     '>My true design process
                 </motion.h1>
                 <motion.span
                     animate={{ y: [60, -140, 60] }}
                     transition={{ duration: 1, ease: easeInOut, repeat: Infinity }}
-                    className='light-yellow  h-4 w-4 block rounded-full relative bottom-25 md:-right-65 -right-35'></motion.span>
+                    className='light-yellow  h-4 w-4 block rounded-full relative bottom-25 md:-right-65 -right-25'></motion.span>
 
-                <div className='md:grid md:grid-cols-2 gap-8 md:m-auto flex flex-col '>
+                <div className='md:grid md:grid-cols-2 gap-8 md:m-auto flex flex-col w-11/12 '>
 
                     {/* //cards */}
                     <motion.div
@@ -27,7 +27,7 @@ function Process() {
                         whileInView={{ scale: 1, x: 0 }}
                         transition={{ duration: .8, ease: easeInOut }}
                         viewport={{ amount: 0.5 }}
-                        className=' rounded-md p-2 hover:scale-110 border transition-all duration-700 '>
+                        className=' rounded-md p-2  hover:scale-110 border transition-all duration-700 '>
 
                         <p className='text-[#e7f721]'>01</p>
                         <p className='text-2xl font-bold my-2'>DISCOVERY</p>
@@ -87,7 +87,7 @@ function Process() {
 
                         <p className='text-[#e7f721]'>06</p>
                         <p className='text-2xl font-bold my-2'>Deliver</p>
-                        <p className='text-gray-400 lg:text-xl lg:w-80 md:w-66 w-80 md:text-lg text-xl  '>Lastly, I’ll compile and send the project assets and guidelines to you. On time and on budget.</p>
+                        <p className='text-gray-400 lg:text-xl lg:w-80 md:w-66 w-fit md:text-lg text-xl  '>Lastly, I’ll compile and send the project assets and guidelines to you. On time and on budget.</p>
                     </motion.div>
                 </div>
             </div>

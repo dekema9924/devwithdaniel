@@ -8,7 +8,7 @@ function Footer() {
     return (
         <footer>
 
-            <div className=' justify-items-end'>
+            <div className=' md:justify-items-end flex justify-center'>
                 <motion.img
                     initial={{ opacity: 0, translateX: -44 }}
                     className='w-66 md:w-80 mt-16 '
