@@ -1,12 +1,12 @@
 
 import { motion } from 'motion/react'
-import boy from '../../public/images/boy.png'
+import boy from '../assets/images/boy.png'
 
 function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer>
+        <footer className=''>
 
             <div className=' md:justify-items-end flex justify-center'>
                 <motion.img

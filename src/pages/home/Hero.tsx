@@ -7,7 +7,7 @@ import About from '../../pages/home/About'
 import Projects from './Projects'
 import Stats from './Stats'
 import Contact from "../../components/Contact"
-import HeroImg from '../../../public/images/HeroImg.jpg'
+import HeroImg from '../../assets/images/HeroImg.jpg'
 
 
 

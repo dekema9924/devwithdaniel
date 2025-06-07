@@ -3,6 +3,7 @@ import { motion } from "motion/react"
 import { useRef } from 'react';
 import { useInView } from 'motion/react';
 import CopyButton from './CopyButton';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isNavOpen, setNavOpen] = useState(false)
@@ -37,12 +38,12 @@ const Header = () => {
                 {/* navbar */}
                 <nav className={` absolute left-0 top-20 w-33 bg-[#0a0a0f]  overflow-hidden transition-all duration-700 z-50 tracking-widest ${isNavOpen ? "h-70" : "h-0"} `}>
                     <ul className='flex flex-col gap-4 text-2xl font-bold lett'>
-                        <li className='heading-font cursor-pointer hover:text-[#e7f721]'>HOME</li>
-                        <li className='heading-font cursor-pointer hover:text-[#e7f721]'>ABOUT</li>
-                        <li className='heading-font cursor-pointer hover:text-[#e7f721]'>PROJECTS</li>
-                        <li className='heading-font cursor-pointer hover:text-[#e7f721]'>EDUCATION</li>
-                        <li className='heading-font cursor-pointer hover:text-[#e7f721]'>WRITING</li>
-                        <li className='heading-font cursor-pointer hover:text-[#e7f721]'>CONTACT</li>
+                        <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>HOME</Link>
+                        <Link to={'/about'} className='heading-font cursor-pointer hover:text-[#e7f721]'>ABOUT</Link>
+                        <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>PROJECTS</Link>
+                        <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>EDUCATION</Link>
+                        <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>WRITING</Link>
+                        <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>CONTACT</Link>
                     </ul>
                 </nav>
             </motion.header >
