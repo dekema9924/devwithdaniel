@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from "motion/react"
 import { useRef } from 'react';
 import { useInView } from 'motion/react';
@@ -13,6 +13,10 @@ const Header = () => {
             amount: 0,
             once: false,
         })
+
+    useEffect(() => {
+        document.body.style.overflow = isNavOpen ? 'hidden' : '';
+    }, [isNavOpen])
 
 
     return (
@@ -38,12 +42,12 @@ const Header = () => {
                 {/* navbar */}
                 <nav className={` absolute left-0 top-20 w-33 bg-[#0a0a0f]  overflow-hidden transition-all duration-700 z-50 tracking-widest ${isNavOpen ? "h-70" : "h-0"} `}>
                     <ul className='flex flex-col gap-4 text-2xl font-bold lett'>
-                        <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>HOME</Link>
-                        <Link to={'/about'} className='heading-font cursor-pointer hover:text-[#e7f721]'>ABOUT</Link>
-                        <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>PROJECTS</Link>
-                        <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>EDUCATION</Link>
-                        <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>WRITING</Link>
-                        <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>CONTACT</Link>
+                        <Link onClick={() => setNavOpen(false)} to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>HOME</Link>
+                        <Link onClick={() => setNavOpen(false)} to={'/about'} className='heading-font cursor-pointer hover:text-[#e7f721]'>ABOUT</Link>
+                        <Link onClick={() => setNavOpen(false)} to={'/projects'} className='heading-font cursor-pointer hover:text-[#e7f721]'>PROJECTS</Link>
+                        {/* <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>EDUCATION</Link> */}
+                        {/* <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>WRITING</Link> */}
+                        <Link onClick={() => setNavOpen(false)} to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>CONTACT</Link>
                     </ul>
                 </nav>
             </motion.header >

@@ -1,29 +1,31 @@
 import { motion } from 'motion/react'
 import Logo from './Logo'
-import Mytoolkit from '../Mytoolkit'
+import Mytoolkit from './Mytoolkit'
+import Services from './Services'
+import Contact from '../../components/Contact'
 
 
 function AboutPage() {
     return (
         <>
 
-            <main className="mt-33">
+            <main className="mt-16 md:mt-33">
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
+                    initial={{ opacity: 0, x: 144 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: .5 }}
                     viewport={{ amount: 0.7 }}
                     className="md:flex md:items-start lg:items-end  gap-6 ">
-                    <h1 className="text-[5em] md:text-[15em] flex flex-col md:leading-45 ">Daniel <span className="md:ml-19">Ekema</span></h1>
+                    <h1 className="text-[5em] md:text-[15em] flex flex-col leading-15 md:leading-45 ">Daniel <span className="md:ml-19 ml-6">Ekema</span></h1>
                     <p className="my-4  w-66 md:relative md:right-35 lg:static">Transforming ideas into functional, responsive websites and full-featured web apps.</p>
 
                 </motion.div>
 
-                <div className="mt-44 flex flex-col gap-7 md:flex-row md:justify-center  md:w-full  ">
+                <div className="mt-20 md:mt-44 flex flex-col gap-7 md:flex-row md:justify-center  md:w-full  ">
                     <p className="text-gray-400 w-44">ABOUT ME</p>
                     <div className="md:flex md:flex-row-reverse md:items-center  md:w-10/12">
                         <div className="md:flex md:items-center md:gap-6 md:w-4/12">
-                            <img className=" w-full my-6 md:w-34 md: md:h-34 object-cover md:rounded-full" src="https://framerusercontent.com/images/FTt3yKYvDI5ffZIm90usuJmzE.png?scale-down-to=1024" alt="profile" />
+                            <img className=" w-11/12 rounded-2xl my-6 md:w-34 md: md:h-34 object-cover md:rounded-full" src="https://framerusercontent.com/images/FTt3yKYvDI5ffZIm90usuJmzE.png?scale-down-to=1024" alt="profile" />
                         </div>
                         <div className="flex flex-col gap-10 md:w-11/12">
                             <p className="text-lg leading-8 w-9/12 md:w-11/12"> I combine full-stack development with a design-first mindset to craft seamless digital products, collaborating with enthusiastic teams to turn complex problems into polished web solutions.</p>
@@ -40,6 +42,8 @@ function AboutPage() {
 
                 <Logo />
                 <Mytoolkit />
+                <Services />
+                <Contact />
             </main>
 
         </>
@@ -49,4 +53,3 @@ function AboutPage() {
 export default AboutPage
 
 
-//animate phone start from corner and enter screen from side
