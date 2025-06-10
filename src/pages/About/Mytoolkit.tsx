@@ -42,6 +42,7 @@ function Mytoolkit() {
                             x: 0
 
                         }}
+
                         transition={{ duration: 1, ease: easeInOut }}
                         className=' w-8/12 bg-blue-700 relative h-full flex items-center rounded-md justify-end'>
                         <div className='flex gap-2 absolute md:left-10'>

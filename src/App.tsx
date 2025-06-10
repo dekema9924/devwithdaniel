@@ -3,7 +3,7 @@ import Hero from './pages/home/Hero'
 import Footer from './components/Footer'
 import { Routes, Route } from 'react-router-dom'
 import AboutPage from "./pages/About/AboutPage"
-import Projects from "./pages/home/Projects"
+import ProjectPage from "./pages/Projects/ProjectPage"
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<ProjectPage />} />
           {/* <Route path="/education" element={<Hero />} />
           <Route path="/blogs" element={<Hero />} /> */}
         </Routes>
