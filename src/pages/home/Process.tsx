@@ -1,23 +1,31 @@
 
 
-import { easeInOut, motion } from 'motion/react'
+import { motion } from 'motion/react'
 
 function Process() {
     return (
         <>
             <div className='flex flex-col gap-4 items-center justify-center'>
-                <motion.h1
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1, scale: 1.6 }}
-                    viewport={{ amount: 0.5 }}
-                    className='text-4xl relative md:text-[3em] md:line-clamp-2 md:mt-44 mt-44 text-center w-64 md:w-96 
-                    before:content-[""] before:border-2 before:w-6 before:rotate-10 before:left-[180px] before:h-1 before:absolute before:bottom-5
-                    '>My true design process
-                </motion.h1>
-                <motion.span
-                    animate={{ y: [60, -140, 60] }}
-                    transition={{ duration: 1, ease: easeInOut, repeat: Infinity }}
-                    className='light-yellow  h-4 w-4 block rounded-full relative bottom-25 md:-right-65 -right-25'></motion.span>
+                <section className="flex flex-col items-center justify-center mt-32 md:mt-52 px-4 relative z-10">
+                    <motion.h1
+                        initial={{ opacity: 0, x: -100, y: 100, rotate: -5, scale: 0.9 }}
+                        whileInView={{ opacity: 1, x: 0, y: 0, rotate: 0, scale: 1 }}
+                        viewport={{ amount: 0.5, }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        className="text-center font-extrabold text-transparent text-4xl sm:text-5xl md:text-6xl bg-clip-text bg-gradient-to-br from-yellow-300 via-white to-yellow-500 drop-shadow-lg"
+                    >
+                        My True Design Process
+                    </motion.h1>
+
+                    {/* Animated underline */}
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
+                        className="mt-4 h-1 w-2/3 max-w-md origin-left bg-gradient-to-r from-[#e7f721] to-[#e7f721] rounded-full"
+                    />
+                </section>
+
                 <div className='md:grid md:grid-cols-2 gap-8 md:mx-auto mt-10 md:mt-22 flex flex-col w-11/12'>
                     {[
                         {
