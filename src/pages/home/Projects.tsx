@@ -11,33 +11,36 @@ const Projects = () => {
     return (
         <>
             <section className="my-24 relative overflow-hidden">
-                <motion.h1
-                    initial={{ skewY: 44, opacity: 0 }}
-                    whileInView={{ skewY: 0, opacity: 1 }}
-                    transition={{
-                        duration: 0.8,
-                        ease: [0.25, 0.8, 0.25, 1]
-                    }}
+                <div className='flex justify-center'>
+                    <motion.h1
+                        initial={{ skewY: 20, opacity: 0, y: -30 }}
+                        whileInView={{ skewY: 0, opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.6,
+                            ease: [0.25, 0.8, 0.25, 1],
+                        }}
+                        viewport={{ amount: 0.5 }}
+                        className="text-center text-[3.8em] leading-14 z-50 absolute top-0 origin-top-left"
+                    >
+                        Discover <br /> My Latest Projects
+                    </motion.h1>
 
-                    viewport={{ amount: 0.5 }}
-                    className="text-center  text-[3.8em] leading-14 z-50 absolute top-0 origin-top-left">Discover <br /> My Latest Projects
-                </motion.h1>
-
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{
-                        duration: 0.8,
-                        ease: [0.25, 0.8, 0.25, 1]
-                    }}
-                    className="pointer-events-none skew-x-12 skew-y-12 relative md:top-22 top-33 "
-                >
-                    <img
-                        src="https://framerusercontent.com/images/NJSwXyDlaUZn0O49iCxLH4yY.png?scale-down-to=1024"
-                        alt="bgImg"
-                        className="md:h-[500px] rounded-md m-auto skew-y-12 object-cover"
-                    />
-                </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{
+                            duration: 0.8,
+                            ease: [0.25, 0.8, 0.25, 1]
+                        }}
+                        className="pointer-events-none md:skew-x-12 skew-y-9 relative md:top-22 top-33 "
+                    >
+                        <img
+                            src="https://framerusercontent.com/images/NJSwXyDlaUZn0O49iCxLH4yY.png?scale-down-to=1024"
+                            alt="bgImg"
+                            className="md:h-[500px] rounded-md m-auto skew-y-9 object-cover"
+                        />
+                    </motion.div>
+                </div>
 
 
                 {/* //projects */}

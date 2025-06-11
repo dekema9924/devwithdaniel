@@ -1,5 +1,16 @@
 import { motion } from "motion/react"
 import { useState } from "react";
+import stackApply from '../assets/images/projectImages/stackapply.png'
+import brainwave from '../assets/images/projectImages/brainwave.png'
+import cybrs from '../assets/images/projectImages/cybrs.png'
+import mangaverse from '../assets/images/projectImages/mangaverse.png'
+import quickblogs from '../assets/images/projectImages/quickblogs.png'
+
+
+
+
+
+
 
 const ProjectProp = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null)
@@ -16,30 +27,39 @@ const ProjectProp = () => {
                     [
                         {
                             name: "QuickBlog",
-                            backgroundImg: "https://images.unsplash.com/photo-1607706189992-eae578626c86?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fHww",
+                            backgroundImg: quickblogs,
                             id: 1,
                             preview: "https://quickbl0gs.netlify.app"
                         },
                         {
                             name: "StackApply",
-                            backgroundImg: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kaW5nfGVufDB8fDB8fHww",
+                            backgroundImg: stackApply,
                             id: 2,
                             preview: "https://stackapply.netlify.app"
                         },
                         {
                             name: "MangaVerse",
-                            backgroundImg: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZSUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
+                            backgroundImg: mangaverse,
                             id: 3,
                             preview: "https://manga.devwithdaniel.com"
 
                         },
                         {
                             name: "BrainWave",
-                            backgroundImg: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D",
+                            backgroundImg: brainwave,
                             id: 4,
                             preview: "https://br0inwave.netlify.app"
 
                         },
+                        {
+                            name: "CYBRS",
+                            backgroundImg: cybrs,
+                            id: 4,
+                            preview: "https://cybrs.netlify.app"
+
+                        },
+
+
                     ].map((p) => {
                         return (
                             <>

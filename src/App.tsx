@@ -4,12 +4,14 @@ import Footer from './components/Footer'
 import { Routes, Route } from 'react-router-dom'
 import AboutPage from "./pages/About/AboutPage"
 import ProjectPage from "./pages/Projects/ProjectPage"
+import ScrollToTop from "./components/ScrollToTop"
 
 function App() {
   return (
     <>
       <div className=" md:w-8/12 w-11/12 m-auto mt-14 ">
         <Header />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<AboutPage />} />

@@ -8,10 +8,10 @@ function About() {
     const ref1 = useRef(null)
     const ref2 = useRef(null)
     const isInView1 = useInView(ref1, { amount: 0.5, once: false })
-    const isInView2 = useInView(ref2, { amount: 0.5, once: false })
+    const isInView2 = useInView(ref2, { amount: 0.7, once: false })
 
     return (
-        <section className="md:mt-14 mt-24 md:my-22 ">
+        <section className="md:mt-14 mt-34 md:my-22 ">
             <motion.h1
                 ref={ref1}
                 initial={{ opacity: 0, y: 40 }}
