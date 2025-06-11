@@ -8,10 +8,10 @@ function About() {
     const ref1 = useRef(null)
     const ref2 = useRef(null)
     const isInView1 = useInView(ref1, { amount: 0.5, once: false })
-    const isInView2 = useInView(ref2, { amount: 0.7, once: false })
+    const isInView2 = useInView(ref2, { amount: 0.5, once: false })
 
     return (
-        <section className="md:mt-14 mt-34 md:my-22 ">
+        <section className="md:mt-14 mt-34 md:my-22 flex gap-12 flex-col ">
             <motion.h1
                 ref={ref1}
                 initial={{ opacity: 0, y: 40 }}
@@ -19,8 +19,9 @@ function About() {
                     opacity: isInView1 && !isInView2 ? 1 : 0,
                     y: isInView1 && !isInView2 ? 0 : 30,
                 }}
+                viewport={{ amount: 0.7 }}
                 transition={{ duration: 0.7, ease: easeInOut }}
-                className="md:text-[3em] text-[2em] text-center md:w-[500px] md:m-auto"
+                className="md:text-[3em] text-[2em] text-center md:w-[500px] md:m-auto mt-44"
             >
                 I love making cool things and solving complex problems for people --- like you
             </motion.h1>
