@@ -21,7 +21,7 @@ function Mytoolkit() {
 
                         }}
                         transition={{ duration: 1, ease: easeInOut }}
-                        className=' w-9/12 bg-blue-700 relative h-full flex items-center rounded-md justify-end'>
+                        className=' w-9/12 bg-blue-700 relative h-full flex items-center rounded-md justify-end pr-20'>
                         <div className='flex gap-2 absolute left-4 md:left-10'>
                             <img className='border w-10 object-cover h-10 md:w-14 md:h-14 bg-white md:p-2 rounded-md' src="https://cdn-icons-png.flaticon.com/128/15772/15772797.png" alt="" />
                             <div>
@@ -44,7 +44,7 @@ function Mytoolkit() {
                         }}
 
                         transition={{ duration: 1, ease: easeInOut }}
-                        className=' w-8/12 bg-blue-700 relative h-full flex items-center rounded-md justify-end'>
+                        className=' w-8/12 bg-blue-700 relative h-full flex items-center rounded-md justify-end pr-20'>
                         <div className='flex gap-2 absolute md:left-10'>
                             <img className='border w-10 object-cover h-10 md:w-14 md:h-14 bg-white md:p-2 rounded-md' src="https://cdn-icons-png.flaticon.com/128/15379/15379746.png" alt="" />
                             <div >
@@ -66,12 +66,12 @@ function Mytoolkit() {
 
                         }}
                         transition={{ duration: 1, ease: easeInOut }}
-                        className=' w-7/12 bg-blue-700 relative h-full flex items-center rounded-md justify-end'>
+                        className=' w-7/12 bg-blue-700 relative h-full flex items-center rounded-md justify-end pr-20 '>
                         <div className='flex gap-2 absolute md:left-10 left-4'>
                             <img className='border md:w-14 w-10 h-10 md:h-14 object-cover bg-white md:p-2 rounded-md' src="https://cdn-icons-png.flaticon.com/128/15713/15713436.png" alt="" />
                             <div>
                                 <p className='text-white'>VS Code</p>
-                                <p className='text-gray-400 text-xs md:text-sm'>Writing clean, responsive UI.</p>
+                                <p className='text-gray-400 text-xs md:text-sm w-34'>Writing clean, responsive UI.</p>
                             </div>
                         </div>
                         <span className='w-fit border block px-3 rounded-lg bg-yellow-300 text-black font-bold relative left-10'>60%</span>
