@@ -41,7 +41,7 @@ function Contact() {
     };
 
     return (
-        <div className="mt-20  ">
+        <div id="contact" className="mt-20  ">
             <motion.div
                 ref={ref}
                 initial="hidden"

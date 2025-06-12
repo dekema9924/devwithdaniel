@@ -59,6 +59,28 @@ function Mytoolkit() {
                     </motion.span>
                 </span>
 
+                {/* MOngoose */}
+                <span className="w-10/12 block h-22 rounded-xl bg-gray-200 overflow-hidden">
+                    <motion.span
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "85%" }}
+                        transition={{ duration: 1, ease: easeInOut }}
+                        className="bg-blue-700 relative h-full flex items-center rounded-md pl-4 pr-4"
+                    >
+                        <div className="flex gap-2 items-center">
+                            <img
+                                className="border w-10 h-10 md:w-14 md:h-14 object-cover bg-white md:p-2 rounded-md"
+                                src="https://cdn-icons-png.flaticon.com/128/2906/2906274.png"
+                                alt="NodeJs"
+                            />
+                            <p className="text-white">Databases</p>
+                        </div>
+                        <span className="relative -right-10  bg-yellow-300 text-black font-bold px-3 py-1 rounded-lg">
+                            85%
+                        </span>
+                    </motion.span>
+                </span>
+
                 {/* VS Code */}
                 <span className="w-10/12 block h-22 rounded-xl bg-gray-200 overflow-hidden">
                     <motion.span

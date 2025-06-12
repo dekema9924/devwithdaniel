@@ -7,7 +7,7 @@ const logos = ['🖥️', '💻', '📱', '🧠', '⚙️', '🔒']; // Replace 
 function Logo() {
     return (
         <div className='mt-44 flex flex-col justify-center items-center'>
-            <p className='text-gray-400 text-lg'>Hands-on with<span className='font-bold mx-2 text-white'>10+ MERN </span>projects—clean code, real results</p>
+            <p className='text-gray-400 text-lg'>Hands-on with<span className='font-bold mx-2 text-white'>Real-World MERN </span>projects—clean code, real results</p>
             <div className="relative w-full my-10 overflow-hidden h-16">
                 {/* Gradient fades */}
                 <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#0a0a0f] to-transparent z-10 pointer-events-none" />

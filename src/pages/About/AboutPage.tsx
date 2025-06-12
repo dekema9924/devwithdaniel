@@ -3,6 +3,7 @@ import Logo from './Logo'
 import Mytoolkit from './Mytoolkit'
 import Services from './Services'
 import Contact from '../../components/Contact'
+import profile2 from '../../assets/images/profile2.JPG'
 
 
 function AboutPage() {
@@ -25,14 +26,14 @@ function AboutPage() {
                     <p className="text-gray-400 w-44">ABOUT ME</p>
                     <div className="md:flex md:flex-row-reverse md:items-center  md:w-10/12">
                         <div className="md:flex md:items-center md:gap-6 md:w-4/12">
-                            <img className=" w-11/12 rounded-2xl my-6 md:w-34 md: md:h-34 object-cover md:rounded-full" src="https://framerusercontent.com/images/FTt3yKYvDI5ffZIm90usuJmzE.png?scale-down-to=1024" alt="profile" />
+                            <img className=" w-11/12 rounded-2xl my-6  md:w-34 md: md:h-34 object-cover md:rounded-full" src={profile2} alt="profile" />
                         </div>
                         <div className="flex flex-col gap-10 md:w-11/12">
                             <p className="text-lg leading-8 w-9/12 md:w-11/12"> I combine full-stack development with a design-first mindset to craft seamless digital products, collaborating with enthusiastic teams to turn complex problems into polished web solutions.</p>
-                            <button className="relative z-50 w-44 h-13 px-6 text-white border rounded-4xl cursor-pointer overflow-hidden group">
+                            <a href='#contact' onClick={() => { }} className="relative z-50 flex flex-col items-center justify-center w-44 h-13 px-6 text-white border rounded-4xl cursor-pointer overflow-hidden group">
                                 <span className="absolute inset-0 w-full h-full bg-[#e7f721] rounded-4xl scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700 z-0"></span>
-                                <span className="relative z-10 transition-colors duration-300 group-hover:text-black">Let's connect</span>
-                            </button>
+                                <span className="relative z-10 transition-colors  duration-300 group-hover:text-black">Let's connect</span>
+                            </a>
 
 
                         </div>

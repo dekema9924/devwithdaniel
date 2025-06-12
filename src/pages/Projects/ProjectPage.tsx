@@ -3,18 +3,19 @@ import ProjectProp from "../../components/ProjectProp"
 import { motion } from "motion/react"
 
 
+
 function ProjectPage() {
     return (
         <div className="mt-44">
             {/* Animated Heading */}
             <motion.h1
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ y: 150, opacity: 0, x: 150 }}
+                whileInView={{ y: 0, opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
                 // viewport={{ once: true }}
                 className="text-[6em] text-center  font-bold tracking-tight"
             >
-                Selected Projects
+                Selected Projects.
             </motion.h1>
 
             {/* Animated Projects Section */}
@@ -40,5 +41,8 @@ function ProjectPage() {
         </div>
     )
 }
+
+
+
 
 export default ProjectPage

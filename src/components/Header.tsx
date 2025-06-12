@@ -47,7 +47,7 @@ const Header = () => {
                         <Link onClick={() => setNavOpen(false)} to={'/projects'} className='heading-font cursor-pointer hover:text-[#e7f721]'>PROJECTS</Link>
                         {/* <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>EDUCATION</Link> */}
                         {/* <Link to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>WRITING</Link> */}
-                        <Link onClick={() => setNavOpen(false)} to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>CONTACT</Link>
+                        {/* <Link onClick={() => setNavOpen(false)} to={'/'} className='heading-font cursor-pointer hover:text-[#e7f721]'>CONTACT</Link> */}
                     </ul>
                 </nav>
             </motion.header >

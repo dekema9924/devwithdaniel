@@ -1,45 +1,78 @@
-import { easeInOut, motion } from 'motion/react'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { useState } from "react";
 import ProjectProp from '../../components/ProjectProp';
 import { Link } from 'react-router-dom';
+import { motion, useMotionValue, useTransform, easeInOut } from "framer-motion";
+import { useRef } from "react";
 
 
 const Projects = () => {
     const [isHovered, setHovered] = useState(false)
+    const containerRef = useRef<HTMLDivElement>(null);
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+
+    // Skew values based on mouse
+    const skewX = useTransform(mouseX, [0, 1], [-12, 12]);
+    const skewY = useTransform(mouseY, [0, 1], [-12, 12]);
+
+    interface MouseEventWithTarget extends React.MouseEvent<HTMLDivElement> {
+        currentTarget: HTMLDivElement;
+    }
+
+    const handleMouseMove = (e: MouseEventWithTarget): void => {
+        const rect = containerRef.current?.getBoundingClientRect();
+        if (!rect) return;
+
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+
+        mouseX.set(x);
+        mouseY.set(y);
+    };
+
 
     return (
         <>
             <section className="my-24 relative overflow-hidden">
                 <div className='flex justify-center'>
                     <motion.h1
-                        initial={{ skewY: 20, opacity: 0, y: -30 }}
+                        initial={{ skewY: 6, opacity: 0, y: -20 }}
                         whileInView={{ skewY: 0, opacity: 1, y: 0 }}
                         transition={{
-                            duration: 0.6,
-                            ease: [0.25, 0.8, 0.25, 1],
+                            type: "spring",
+                            stiffness: 120,
+                            damping: 14,
+                            mass: 0.6,
                         }}
-                        viewport={{ amount: 0.5 }}
-                        className="text-center text-[3.8em] leading-14 z-50 absolute top-0 origin-top-left"
+                        viewport={{ amount: 0.6 }}
+                        className="text-center text-[3.8em] leading-[1.2] z-50 absolute top-0 origin-top-left"
                     >
                         Discover <br /> My Latest Projects
                     </motion.h1>
 
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{
-                            duration: 0.8,
-                            ease: [0.25, 0.8, 0.25, 1]
-                        }}
-                        className="pointer-events-none md:skew-x-12 skew-y-9 relative md:top-22 top-33 "
+
+                    <div
+                        ref={containerRef}
+                        onMouseMove={handleMouseMove}
+                        className="relative w-full h-[500px] flex justify-center items-center pointer-events-auto"
                     >
-                        <img
+                        <motion.img
                             src="https://framerusercontent.com/images/NJSwXyDlaUZn0O49iCxLH4yY.png?scale-down-to=1024"
                             alt="bgImg"
-                            className="md:h-[500px] rounded-md m-auto skew-y-9 object-cover"
+                            style={{
+                                skewX,
+                                skewY,
+                            }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{
+                                duration: 0.8,
+                                ease: [0.25, 0.8, 0.25, 1],
+                            }}
+                            className="rounded-md object-cover w-auto h-full"
                         />
-                    </motion.div>
+                    </div>
                 </div>
 
 
@@ -64,10 +97,6 @@ const Projects = () => {
                         <ProjectProp />
                     </div>
                 </div>
-
-
-
-
             </section>
         </>
     )
