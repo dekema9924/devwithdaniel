@@ -79,8 +79,8 @@ function Hero() {
                     <motion.img
 
                         animate={{
-                            width: isInView ? 34 : '100%',
-                            height: isInView ? 224 : 606,
+                            width: isInView ? 34 : '600px',
+                            height: isInView ? 224 : '600px',
                             marginBottom: isInView ? 0 : 44,
                             translateY: isInView ? 0 : 144,
 
